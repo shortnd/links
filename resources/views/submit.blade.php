@@ -10,25 +10,25 @@
             @endif
 
             {!! csrf_field() !!}
-            <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+            <div class="form-group{{ $errors->has('title') ? ' had-error' : '' }}">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{ old('title') }}">
                 @if($errors->has('title'))
-                    <span class="help-block">{{ $errors->first('title') }}</span>
+                    <span class="help-block text-danger">{{ $errors->first('title') }}</span>
                 @endif
             </div>
-            <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
+            <div class="form-group{{ $errors->has('url') ? ' had-error' : '' }}">
                 <label for="url">Url</label>
                 <input type="text" class="form-control" id="url" name="url" placeholder="URL" value="{{ old('url') }}">
                 @if($errors->has('url'))
-                    <span class="help-block">{{ $errors->first('url') }}</span>
+                    <span class="help-block text-danger">{{ $errors->first('url') }}</span>
                 @endif
             </div>
-            <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+            <div class="form-group{{ $errors->has('description') ? ' had-error' : '' }}">
                 <label for="description">Description</label>
                 <textarea class="form-control" id="description" name="description" placeholder="description">{{ old('description') }}</textarea>
                 @if($errors->has('description'))
-                    <span class="help-block">{{ $errors->first('description') }}</span>
+                    <span class="help-block text-danger">{{ $errors->first('description') }}</span>
                 @endif
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
